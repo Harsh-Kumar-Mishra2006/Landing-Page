@@ -1,0 +1,126 @@
+/* Upgraded Testimonials.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@500&display=swap");
+
+:root {
+  --primary: #1a4d8f;
+  --accent: #3aafa9;
+  --light: #ffffff;
+  --bg-testimonial: #f4f6fa;
+  --card-bg: #ffffff;
+  --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --font-primary: "Montserrat", sans-serif;
+  --font-accent: "Playfair Display", serif;
+}
+
+.testimonials {
+  background: linear-gradient(to right, #e8f1ff, #f6f6f6);
+  padding: 5rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+.testimonials-heading {
+  font-size: 2.7rem;
+  color: var(--primary);
+  font-family: var(--font-accent);
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  min-width: 100%;
+  padding: 2.5rem 2rem;
+  margin: 0 1rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-quote {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #444;
+  font-family: var(--font-accent);
+  position: relative;
+}
+
+.testimonial-quote::before,
+.testimonial-quote::after {
+  content: '"';
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .student-img {
+  transform: rotate(2deg) scale(1.05);
+}
+
+.student-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 0.2rem;
+}
+
+/* Dots navigation */
+.dots {
+  margin-top: 2.2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background: var(--accent);
+  transform: scale(1.3);
+}

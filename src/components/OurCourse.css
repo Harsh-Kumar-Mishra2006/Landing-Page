@@ -1,0 +1,86 @@
+/* OurCourse.css */
+:root {
+  --primary: #1a4d8f;
+  --accent: #3aafa9;
+  --light: #ffffff;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.courses-section {
+  padding: 4rem 2rem;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.courses-heading {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+.courses-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  flex: 1 1 50%;
+  background-size: cover;
+  background-position: center;
+  min-height: 140px;
+}
+
+.card-content {
+  padding: 1.4rem;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+}
+
+.enroll-btn {
+  align-self: flex-start;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.enroll-btn:hover {
+  background: #2a8d8a;
+  transform: translateY(-2px);
+}
